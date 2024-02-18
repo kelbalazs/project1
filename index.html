@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Country Profiler With a Map">
+  <meta name="keywords" content="HTML, CSS, Bootstrap, JavaScript, Leaflet, AJAX, JSON, PHP">
+  <meta name="author" content="kelbal">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>It Career Switch Gazetter Project</title>
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+  <!-- Select2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet"/>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="css/leaflet.css">
+  <link rel="stylesheet" href="css/leaflet.extra-markers.min.css">
+ 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/weather_card.css">
+</head>
+<body>
+  <!-- Country Modal -->
+  <div class="modal fade" id="countryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-left" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Country Information</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="countryInfoModal">
+          <!-- Information will be displayed here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Weather Modal -->
+  <div class="modal fade" id="weatherModal" tabindex="-1" aria-labelledby="weatherModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-right" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="weatherModalLabel">Weather Information</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="weatherInfoModal">
+          <!-- Weather information will be displayed here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="wikipediaButton">Generate Wikipedia Link</button>
+
+
+
+  <!-- Buttons to show/hide modals -->
+  <!-- <div class="btn-group" role="group" aria-label="Modals">
+    <button type="button" class="btn btn-primary" id="showCountryModalBtn">Show Country Modal</button>
+    <button type="button" class="btn btn-primary" id="showWeatherModalBtn">Show Weather Modal</button>
+    <button type="button" class="btn btn-primary" id="hideModalsBtn">Hide Modals</button>
+  </div> -->
+
+  <!-- Map Container -->
+  <div id="map"></div>
+
+  <!-- Select Dropdown -->
+  <div id="map_sibling_top">
+    <select id="country_list" onchange="zoomToCountry(this.value)">
+      <option value="">Select Country</option>
+    </select>
+  </div>
+
+  <!-- JavaScript Libraries -->
+  <script src="js/leaflet.js"></script>
+  <script src="js/leaflet.spin.min.js"></script>
+  <script src="js/jquery-min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/leaflet.extra-markers.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

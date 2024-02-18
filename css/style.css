@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%;
+}
+
+.modal-body {
+  height: 30vh;
+  overflow-y: auto;
+}
+
+/* Map */
+.container-fluid,
+.row,
+#map,
+#map_parent {
+  height: 100%;
+}
+#map_parent {
+  position: relative;
+  padding: 0;
+}
+#map_sibling_top {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  width: 200px;
+  z-index: 401;
+}
+
+.fas.fa-arrow-left {
+  cursor: pointer;
+}
+
+.modal-dialog-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.modal-custom-height .modal-content {
+  height: 200px; /* Adjust the height as needed */
+  max-height: 50vh; /* Maximum height */
+}
